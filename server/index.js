@@ -1,7 +1,11 @@
 
+
+
 const http = require('http');
 
 const server = http.createServer();
+
+const PORT = process.env.PORT || 3001; // Render asigna el puerto automáticamente
 
 const io = require('socket.io')(server, {
   cors: {

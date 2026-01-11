@@ -1,15 +1,15 @@
 
 
-
 const http = require('http');
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Chat server is running\n');
+});
 
-const server = http.createServer();
 
+const PORT = process.env.PORT || 10000;
 
-
-const PORT = process.env.PORT || 10000; // Render asigna el puerto automáticamente
-const HOST = '0.0.0.0';
-
+const HOST = '::';  // ← Key change: use '::' instead of '0.0.0.0'
 
 const io = require('socket.io')(server, {
   cors: {
@@ -42,6 +42,8 @@ io.on('connection', (socket) => {
   });
 });
 
+
 server.listen(PORT, HOST, () => {
   console.log(`listening on ${HOST}:${PORT}`);
 });
+

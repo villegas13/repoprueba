@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.js",  
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -14,6 +14,10 @@
     "express": "^5.2.1",
     "socket.io": "^4.8.3"
   },
+<<<<<<< HEAD:server/package.json
   "devDependencies": {},
   "type": "commonjs"
+=======
+  "type": "module"
+>>>>>>> 4807b55404cf96236e9c3f66b332eeda8bf41230:backend/package.json
 }

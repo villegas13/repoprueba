@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
 });
 
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3001;
 
 const HOST = '::';  // ← Key change: use '::' instead of '0.0.0.0'
 

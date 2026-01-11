@@ -5,7 +5,12 @@ const http = require('http');
 
 const server = http.createServer();
 
-const PORT = process.env.PORT || 3001; // Render asigna el puerto automáticamente
+const PORT = process.env.PORT || 10000; // Render asigna el puerto automáticamente
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+    console.log(`Servidor corriendo en http://${HOST}:${PORT}`);
+});
 
 const io = require('socket.io')(server, {
   cors: {
